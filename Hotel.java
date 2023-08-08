@@ -36,7 +36,7 @@ public class Hotel
             case '2': addReservation(); break;
             case '3': showAllReservations(); break;
             case '4': updateReservation(); break;
-            case '5': searchReservation(); break;
+            case '5': cancelReservation(); break;
             case '6': exit(); return;
             case '?': menu();; break;
             default: error();
