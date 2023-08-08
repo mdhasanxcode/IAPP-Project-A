@@ -89,8 +89,8 @@ public class Reservations extends Records {
     }
 
     
-    // 4. updateReservations
-    public void updateReservation(){
-
+    // 4. cancelReservations
+    public void cancelReservation(){
+        
     }
 }

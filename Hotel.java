@@ -89,9 +89,9 @@ public class Hotel
     
     
     // 5th Option;
-    private void searchReservation()
+    private void cancelReservation()
     {
-        //reservations.update();
+        //reservations.canel();
         System.out.println("Pass");
         menu();
     }
