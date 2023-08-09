@@ -164,4 +164,18 @@ public class In
         return selectedRoomType;
     }
 
+        // Read Option
+        public static char readOption(String message)
+        {
+            System.out.print("Please enter " + message + ": ");
+            return In.readChar();
+        }
+        
+        // default option || if there is any invalid option
+        public static void error()
+        {
+            System.out.println("No action found. Try again");
+            //menu();
+        }
+
 }

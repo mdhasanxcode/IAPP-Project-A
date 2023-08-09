@@ -8,7 +8,7 @@ public class Hotel
     {
         // welcome message
         System.out.println("--------------------- Welcome to Hotel Del Luna!! ----------------------\n");
-        System.out.println("------Please Provide Login Credentials to use the Management System-----\n");
+        System.out.println("-------------- Please Login to use the Management System ----------------\n");
         
         // take credintials
         login.takeCredentials();
@@ -41,7 +41,7 @@ public class Hotel
     private void menu()
     {
         displayMenu();
-        char option = readOption();
+        char option = In.readOption("your choice (1, 2, 3, 4, 5, 6, ?)");
         switch (option)
         {
             case '1': showAvailableRooms(); break;
@@ -50,24 +50,11 @@ public class Hotel
             case '4': updateReservation(); break;
             case '5': cancelReservation(); break;
             case '6': exit(); return;
-            case '?': menu();; break;
-            default: error();
+            case '?': menu(); break;
+            default : In.error(); menu();
         }
     }
-    
-    // Read Option
-    private char readOption()
-    {
-        System.out.print("Please enter your choice (1, 2, 3, 4, 5, 6, ?): ");
-        return In.readChar();
-    }
-    
-    // default option || if there is any invalid option
-    private void error()
-    {
-        System.out.println("No action found. Try again");
-        menu();
-    }
+
 
     
     
