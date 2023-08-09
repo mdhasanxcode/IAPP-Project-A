@@ -1,23 +1,35 @@
 public class Hotel
 {
     private Reservations reservations = new Reservations();
-    // private Rooms rooms = new Rooms();
+    private Login login = new Login("Admin", "1234");
+    
     //Constructor
     public Hotel()
     {
-        System.out.println("Welcome to Hotel Del Luna!!");
+        // welcome message
+        System.out.println("--------------------- Welcome to Hotel Del Luna!! ----------------------\n");
+        System.out.println("------Please Provide Login Credentials to use the Management System-----\n");
         
-        //help();
+        // take credintials
+        login.takeCredentials();
+        
+        while(login.verify() == false){
+            login.takeCredentials();
+        }
+
+        // MENU
         menu();
+
     }
 
     
-    private void help()
+    // Display Menu
+    private void displayMenu()
     {
         System.out.println("\n1 to see available rooms");
-        System.out.println("2 to add a new Reservation");
-        System.out.println("3 to see all the reservations");
-        System.out.println("4 to update existing Reservation by reservation Id");
+        System.out.println("2 to see all the reservations");
+        System.out.println("3 to add a new Reservation");
+        System.out.println("4 to update existing Reservation (by reservation Id)");
         System.out.println("5 to cancel a reservation");
         System.out.println("6 to exit");
         System.out.println("? to see the menu!\n");
@@ -28,13 +40,13 @@ public class Hotel
     // MENU
     private void menu()
     {
-        help();
+        displayMenu();
         char option = readOption();
         switch (option)
         {
             case '1': showAvailableRooms(); break;
-            case '2': addReservation(); break;
-            case '3': showAllReservations(); break;
+            case '2': showAllReservations(); break;
+            case '3': addReservation(); break;
             case '4': updateReservation(); break;
             case '5': cancelReservation(); break;
             case '6': exit(); return;
@@ -99,17 +111,8 @@ public class Hotel
     
     // 6th Option;
     private void exit() {
-        System.out.println("Exiting the program. Goodbye!");
+        System.out.println("------Exiting the program. Goodbye!------");
     }
-    
-    
-    private void searchGuest()
-    {
-        //reservations.update();
-        System.out.println("Pass");
-        menu();
-    }
-    
     
     
 }
