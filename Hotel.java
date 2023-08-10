@@ -90,15 +90,14 @@ public class Hotel
     // 5th Option;
     private void cancelReservation()
     {
-        //reservations.cancel();
-        System.out.println("Pass");
+        reservations.cancelReservation();
         menu();
     }
     
     
     // 6th Option;
     private void exit() {
-        System.out.println("------Exiting the program. Goodbye!------");
+        System.out.println("\n------Exiting the program. Goodbye!------\n");
     }
     
     

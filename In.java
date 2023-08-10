@@ -87,7 +87,7 @@ public class In
     public static char readChar() {
         String input = nextLine();
         while (input.isEmpty()) {
-            System.out.println("!!!Invalid input!!!\nPlease enter a character: ");
+            System.out.print("Invalid input!!\nPlease enter valid option: ");
             input = nextLine();
         }
         return input.charAt(0);
@@ -97,8 +97,13 @@ public class In
     // Read Upper Charechter
     public static char readUpperChar()
     {   
-        return in.nextLine().toUpperCase().charAt(0); 
-        
+        try{
+            char read =  in.nextLine().toUpperCase().charAt(0); 
+            return read;
+        }
+        catch (StringIndexOutOfBoundsException s){
+            return 'N';
+        }
     }
     
     //Read String
@@ -175,7 +180,6 @@ public class In
         public static void error()
         {
             System.out.println("No action found. Try again");
-            //menu();
         }
 
 }

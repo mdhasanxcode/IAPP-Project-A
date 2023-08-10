@@ -14,10 +14,17 @@ public class Guest extends Record {
         return guestName;
     }
 
+    public void setGuestName(String guestName){
+        this.guestName = guestName;
+    }
+
     public int getGuestContact() {
         return guestContact;
     }
 
+    public void setGuestContact(int guestContact){
+        this.guestContact = guestContact;
+    }
 
     @Override
     public String toString() {

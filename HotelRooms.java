@@ -1,7 +1,7 @@
 public class HotelRooms extends Room{
 
     public HotelRooms(int id, RoomType roomType) {
-        super(id+100);
+        super(id);
 
         if(roomType == RoomType.Single) {
             this.roomType = roomType;

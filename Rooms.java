@@ -20,7 +20,7 @@ public class Rooms extends Records
 
 
     public void showAvailableRooms() {
-        System.out.println("Available Hotel Rooms:\n");
+        System.out.println("\n--------------- Available Hotel Rooms ---------------\n");
         for (Record record : records) {
             if (record instanceof HotelRooms) {
                 HotelRooms room = (HotelRooms) record;
