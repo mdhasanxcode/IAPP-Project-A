@@ -28,10 +28,11 @@ public class Hotel
     {
         System.out.println("\n1 to see available rooms");
         System.out.println("2 to see all the reservations");
-        System.out.println("3 to add a new Reservation");
-        System.out.println("4 to update existing Reservation (by reservation Id)");
-        System.out.println("5 to cancel a reservation");
-        System.out.println("6 to exit");
+        System.out.println("3 to see all the guests");
+        System.out.println("4 to add a new Reservation");
+        System.out.println("5 to update existing Reservation (by reservation Id)");
+        System.out.println("6 to cancel a reservation");
+        System.out.println("7 to exit");
         System.out.println("? to see the menu!\n");
     }
 
@@ -46,10 +47,11 @@ public class Hotel
         {
             case '1': showAvailableRooms(); break;
             case '2': showAllReservations(); break;
-            case '3': addReservation(); break;
-            case '4': updateReservation(); break;
-            case '5': cancelReservation(); break;
-            case '6': exit(); return;
+            case '3': showAllGuests(); break;
+            case '4': addReservation(); break;
+            case '5': updateReservation(); break;
+            case '6': cancelReservation(); break;
+            case '7': exit(); return;
             case '?': menu(); break;
             default : In.error(); menu();
         }
@@ -63,22 +65,27 @@ public class Hotel
         reservations.showAvailableRooms();
         menu();
     }
-    
-    
-    // 2nd Option;
-    private void addReservation()
-    {
-        reservations.addReservation();
-        menu();
-    }
-    
-    // 3rd Option:
+        
+    // 2nd option;
     private void showAllReservations(){
         reservations.showAllReservations();
         menu();
     }
     
+    // 3rd Option:
+    private void showAllGuests(){
+        reservations.showAllGuests();
+        menu();
+    }
+    
     // 4th Option;
+    private void addReservation()
+    {
+        reservations.addReservation();
+        menu();
+    }
+
+    // 5th Option;
     private void updateReservation()
     {
         reservations.updateReservation();
@@ -87,7 +94,7 @@ public class Hotel
     }
     
     
-    // 5th Option;
+    // 6th Option;
     private void cancelReservation()
     {
         reservations.cancelReservation();
@@ -95,7 +102,7 @@ public class Hotel
     }
     
     
-    // 6th Option;
+    // 7th Option;
     private void exit() {
         System.out.println("\n------Exiting the program. Goodbye!------\n");
     }

@@ -20,12 +20,13 @@ public class Guests {
 
     public void showAllGuests() {
         if (guestsList.isEmpty()) {
-            System.out.println("No guests found.");
+            System.out.println("\n------------------ No guests found ------------------\n");
         } else {
-            System.out.println("All Guests:");
+            System.out.println("\n-------------------- All Guests ---------------------\n");
             for (Guest guest : guestsList) {
                 System.out.println(guest.toString());
             }
+            System.out.println("\n-------------------- xxxxxxxxxx ---------------------\n");
         }
     }
 

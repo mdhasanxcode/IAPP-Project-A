@@ -11,11 +11,12 @@ public class Reservations extends Records {
     
     
     
-    // There are 4 methods in this Class
+    // There are 5 methods in this Class
     // 1. addReservation()
     // 2. showAvailableRooms || Reservation.showAvailableRooms which calls showAvailableRooms from Rooms
     // 3. showAllReservations
     // 4. updateReservations
+    // 5. showAllGuests()
     
     
     // 1. addReservation()
@@ -254,5 +255,10 @@ public class Reservations extends Records {
         char more = In.readUpperChar();
         return more;
     }   
+
+    // 5th Methods
+    public void showAllGuests(){
+        guests.showAllGuests();
+    }
 
 }
