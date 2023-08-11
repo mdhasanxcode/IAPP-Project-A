@@ -5,7 +5,6 @@ public class Reservations extends Records {
     private int guestId = 0;
     private String guestName;
     private int guestContact;
-    //private int noOfNights;
     
     
     
